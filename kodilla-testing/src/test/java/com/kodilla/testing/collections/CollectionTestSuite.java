@@ -20,7 +20,7 @@ public class CollectionTestSuite {
         System.out.println("Test Case: end");
     }
 
-    @DisplayName("Test odd numbers exterminatior EMPTY LIST")
+    @DisplayName("Test odd numbers exterminator EMPTY LIST")
     @Test
     void testCaseEmptyList(){
         //Given
