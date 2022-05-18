@@ -35,5 +35,6 @@ bin/
 
 ### VS Code ###
 .vscode/
+
 /kodilla-testing/src/main/java/com/kodilla/testing/weather/stub/
 /kodilla-testing/src/test/java/com/kodilla/testing/weather/

@@ -18,7 +18,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @BeforeEach
-    public static void beforeEveryTest() {
+    public void beforeEveryTest() {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
     }
@@ -46,7 +46,7 @@ public class ShapeCollectorTestSuite {
         boolean result = shapeCollector.removeFigure(square);
 
         //Then
-        Assertions.assertFalse(result);
+        Assertions.assertTrue(result);
     }
 
     @Test
