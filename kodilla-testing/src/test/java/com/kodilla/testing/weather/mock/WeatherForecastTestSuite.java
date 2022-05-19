@@ -32,21 +32,24 @@ public class WeatherForecastTestSuite {
     public void beforeEachTest() {
         counter++;
         System.out.println("Test no." + counter);
-    }
-
-    @Mock
-    private Temperatures temperaturesMock;
-    Map<String, Double> temperaturesMap = new HashMap<>();
-
-    @Test
-    void testCalculateForecastWithMock() {
-        //Given
         temperaturesMap.put("Rzeszow", 25.5);
         temperaturesMap.put("Krakow", 26.2);
         temperaturesMap.put("Wroclaw", 24.8);
         temperaturesMap.put("Warszawa", 25.2);
         temperaturesMap.put("Gdansk", 26.1);
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
+    }
+
+
+    @Mock
+    private Temperatures temperaturesMock;
+    Map<String, Double> temperaturesMap = new HashMap<>();
+
+
+
+    @Test
+    void testCalculateForecastWithMock() {
+        //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
@@ -59,12 +62,6 @@ public class WeatherForecastTestSuite {
     @Test
     void testCalculateAverageWithMock() {
         //Given
-        temperaturesMap.put("Rzeszow", 25.5);
-        temperaturesMap.put("Krakow", 26.2);
-        temperaturesMap.put("Wroclaw", 24.8);
-        temperaturesMap.put("Warszawa", 25.2);
-        temperaturesMap.put("Gdansk", 26.1);
-        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
@@ -77,12 +74,6 @@ public class WeatherForecastTestSuite {
     @Test
     void testCalculateMedianeWithMock() {
         //Given
-        temperaturesMap.put("Rzeszow", 25.5);
-        temperaturesMap.put("Krakow", 26.2);
-        temperaturesMap.put("Wroclaw", 24.8);
-        temperaturesMap.put("Warszawa", 25.2);
-        temperaturesMap.put("Gdansk", 26.1);
-        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
