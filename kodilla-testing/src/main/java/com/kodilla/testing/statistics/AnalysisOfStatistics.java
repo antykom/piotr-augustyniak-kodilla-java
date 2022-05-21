@@ -20,12 +20,10 @@ public class AnalysisOfStatistics {
         numUsers = statistics.usersNames().size();
         numPosts = statistics.postsCount();
         numComments = statistics.commentsCount();
-        if (numUsers != 0) {
-            if (numPosts != 0) {
+        if (numUsers != 0 && numPosts != 0) {
                 postsPerUser = (double) numPosts / numUsers;
                 commentsPerUser = (double) numComments / numUsers;
                 commentsPerPost = (double) numComments / numPosts;
-            }
         }
 
     }
