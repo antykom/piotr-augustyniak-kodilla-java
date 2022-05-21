@@ -36,3 +36,5 @@ bin/
 ### VS Code ###
 .vscode/
 
+/kodilla-testing/src/test/java/com/kodilla/testing/statistics/
+/kodilla-testing/src/main/java/com/kodilla/testing/statistics/
