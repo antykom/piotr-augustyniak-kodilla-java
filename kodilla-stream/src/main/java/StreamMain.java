@@ -4,8 +4,10 @@ import com.kodilla.stream.ForumUser.ForumUser;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Map;
+import java.util.OptionalDouble;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -20,6 +22,5 @@ public class StreamMain {
         resultForumUser.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach((System.out::println));
-
     }
 }
