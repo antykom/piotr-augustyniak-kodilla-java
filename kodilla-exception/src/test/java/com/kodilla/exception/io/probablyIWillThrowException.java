@@ -10,7 +10,9 @@ public class probablyIWillThrowException {
         //Given
         SecondChallenge sc = new SecondChallenge();
 
-        //When & Then
+        //When
+
+        //Then
         assertAll(
                 () -> assertThrows(Exception.class, () -> sc.probablyIWillThrowException(2, 5)),
                 () -> assertDoesNotThrow(() -> sc.probablyIWillThrowException(1, 5)),
