@@ -36,3 +36,10 @@ bin/
 ### VS Code ###
 .vscode/
 
+/kodilla-exception/src/main/java/com/kodilla/exception/nullpointer/
+/kodilla-exception/src/main/java/com/kodilla/exception/main/
+/kodilla-exception/src/main/java/com/kodilla/exception/io/
+/kodilla-exception/src/main/java/com/kodilla/exception/index/
+/kodilla-exception/src/main/java/com/kodilla/exception/test/ExceptionHandling.java
+/kodilla-exception/src/main/java/com/kodilla/exception/test/SecondChallenge.java
+/kodilla-rps/

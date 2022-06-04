@@ -7,6 +7,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
@@ -95,6 +96,7 @@ public class BoardTestSuite {
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(tl -> Period.between(tl.getCreated(), LocalDate.now()).getDays())
                 .reduce(0, (sum, current) -> sum += current);
+
 
         double result = daysValue / tasksNum;
 
