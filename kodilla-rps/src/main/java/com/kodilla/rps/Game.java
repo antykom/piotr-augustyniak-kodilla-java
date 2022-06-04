@@ -49,12 +49,8 @@ public class Game {
             roundCounter++;
         }
 
-        if (userWinCounter > compWinCounter) {
-            return userName;
-        } else if (userWinCounter < compWinCounter) {
-            return "COMPUTER";
-        }
-        return "NO ONE";
+        return (userWinCounter > compWinCounter ? userName :
+                userWinCounter < compWinCounter ? "COMPUTER" : "NO ONE");
     }
 
     String compareMove(String userMove, String compMove) {
