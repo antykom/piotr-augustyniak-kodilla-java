@@ -6,6 +6,11 @@ public class Game {
     private final String userName;
     private final int rounds;
     private final String[] arrayMoves = {"ROCK", "PAPER", "SCISSOR"};
+    private final String ROCK = arrayMoves[0];
+    private final String PAPER = arrayMoves[1];
+    private final String SCISSOR = arrayMoves[2];
+    private final String USER = "USER";
+    private final String COMP = "COMP";
     private final List<Integer> allowedUserMoves = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     Random rnd = new Random();
@@ -35,10 +40,10 @@ public class Game {
 
             result = compareMove(userMove, compMove);
 
-            if (result.equals("USER")) {
+            if (result.equals(USER)) {
                 userWinCounter++;
                 System.out.print(userName + " won. ");
-            } else if (result.equals("COMP")) {
+            } else if (result.equals(COMP)) {
                 compWinCounter++;
                 System.out.print("Computer won. ");
             } else {
@@ -55,24 +60,23 @@ public class Game {
 
     String compareMove(String userMove, String compMove) {
 
-        if (userMove.equals("ROCK") && compMove.equals("PAPER")) {
-            return "COMP";
-        } else if (userMove.equals("ROCK") && compMove.equals("SCISSOR")) {
-            return "USER";
-        } else if (userMove.equals("PAPER") && compMove.equals("ROCK")) {
-            return "USER";
-        } else if (userMove.equals("PAPER") && compMove.equals("SCISSOR")) {
-            return "COMP";
-        } else if (userMove.equals("SCISSOR") && compMove.equals("PAPER")) {
-            return "USER";
-        } else if (userMove.equals("SCISSOR") && compMove.equals("ROCK")) {
-            return "COMP";
+        if (userMove.equals(ROCK) && compMove.equals(PAPER)) {
+            return COMP;
+        } else if (userMove.equals(ROCK) && compMove.equals(SCISSOR)) {
+            return USER;
+        } else if (userMove.equals(PAPER) && compMove.equals(ROCK)) {
+            return USER;
+        } else if (userMove.equals(PAPER) && compMove.equals(SCISSOR)) {
+            return COMP;
+        } else if (userMove.equals(SCISSOR) && compMove.equals(PAPER)) {
+            return USER;
+        } else if (userMove.equals(SCISSOR) && compMove.equals(ROCK)) {
+            return COMP;
         }
         return "DRAW";
     }
 
     int userMoveVerify(int i) {
-        //Scanner sc = new Scanner(System.in);
         while (!allowedUserMoves.contains(i)) {
             System.out.print("Wrong number. Try one more time: ");
             i = sc.nextInt();
