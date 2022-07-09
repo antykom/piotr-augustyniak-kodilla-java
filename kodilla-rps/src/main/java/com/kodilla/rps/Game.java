@@ -5,12 +5,12 @@ import java.util.*;
 public class Game {
     private final String userName;
     private final int rounds;
-    private final String[] arrayMoves = {"ROCK", "PAPER", "SCISSOR"};
-    private final String ROCK = arrayMoves[0];
-    private final String PAPER = arrayMoves[1];
-    private final String SCISSOR = arrayMoves[2];
-    private final String USER = "USER";
-    private final String COMP = "COMP";
+    private static final String[] arrayMoves = {"ROCK", "PAPER", "SCISSOR"};
+    private static final String ROCK = arrayMoves[0];
+    private static final String PAPER = arrayMoves[1];
+    private static final String SCISSOR = arrayMoves[2];
+    private static final String USER = "USER";
+    private static final String COMP = "COMP";
     private final List<Integer> allowedUserMoves = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     Random rnd = new Random();
