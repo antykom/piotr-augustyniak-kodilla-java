@@ -33,24 +33,12 @@ public class MovieStore {
     public static void main(String[] args) {
         Map<String, List<String>> movieList;
         movieList = getMovies();
-        List<String> list = new ArrayList<>();
 
+        String stringToPrint = movieList.values().stream()
+                        .flatMap(list -> list.stream())
+                                .collect(Collectors.joining(" ! "));
 
-        movieList.values().stream()
-                .forEach(e -> {
-                    for (int i = 0; i < e.size(); i++) {
-                        list.add(e.get(i));
-                    }
-                });
-
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).equals(list.get(list.size() - 1))) {
-                System.out.print(list.get(i));
-                return;
-            }
-            System.out.print(list.get(i) + " ! ");
-        }
-
+        System.out.println(stringToPrint);
 
     }
 }
