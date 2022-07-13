@@ -7,6 +7,6 @@ public class Traingle implements Shape {
 
     @Override
     public String getShapeName() {
-        return "This is a triangle";
+        return "This is a traingle";
     }
 }
