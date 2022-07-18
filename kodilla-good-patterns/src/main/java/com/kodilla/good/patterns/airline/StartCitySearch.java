@@ -5,12 +5,19 @@ import java.util.stream.Collectors;
 
 public class StartCitySearch implements AirlineSearchEngine {
 
-    public List<List<String>> search(CityRequest city) {
-        Map<String, List<String>> airLinesMap;
-        airLinesMap = AirLinesDB.getAirLines();
+    public List<Flight> search(CityRequest city) {
+        Map<String, Flight> airLinesMap;
+        airLinesMap = FlightDB.getAirLines();
 
-        return airLinesMap.values().stream()
-                .filter(m -> m.get(0).equals(city.getCity()))
+        airLinesMap.entrySet().forEach(m -> {
+            System.out.println(m);
+        });
+
+
+        List<Flight> odp = airLinesMap.values().stream()
+                .filter(m -> m.getDepartureCity().equals(city))
                 .collect(Collectors.toList());
+
+        return odp;
     }
 }

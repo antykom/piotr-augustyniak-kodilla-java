@@ -6,12 +6,13 @@ import java.util.stream.Collectors;
 
 public class MiddleCitySearch implements AirlineSearchEngine {
 
-    public List<List<String>> search(CityRequest city) {
-        Map<String, List<String>> airLinesMap;
-        airLinesMap = AirLinesDB.getAirLines();
+    public List<Flight> search(CityRequest city) {
+        Map<String, Flight> airLinesMap;
+        airLinesMap = FlightDB.getAirLines();
 
         return airLinesMap.values().stream()
-                .filter(m -> m.get(1).equals(city.getCity()))
+                .filter(m -> m.getArrivalCity().equals(city))
                 .collect(Collectors.toList());
+
     }
 }

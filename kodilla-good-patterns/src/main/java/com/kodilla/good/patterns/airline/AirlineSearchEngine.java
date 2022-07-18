@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface AirlineSearchEngine {
-    public List<List<String>> search(CityRequest city);
+    public List<Flight> search(CityRequest city);
 }
