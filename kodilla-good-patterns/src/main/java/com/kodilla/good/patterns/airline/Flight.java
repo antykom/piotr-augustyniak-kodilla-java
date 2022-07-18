@@ -20,6 +20,6 @@ public class Flight {
     @Override
     public String toString() {
         return "Departure City='" + departureCity + '\'' +
-                ", Arrival City='" + arrivalCity + '\'';
+                ", Arrival City='" + arrivalCity;
     }
 }

@@ -7,18 +7,18 @@ import java.util.Map;
 
 public class FlightDB {
 
-    public static Map<String, Flight> getAirLines() {
+    public static List<Flight> getAirLines() {
 
         Flight firstConnection = new Flight("Warsaw", "Cracow");
         Flight secondConnection = new Flight("Cracow", "New York");
         Flight thirdConnection = new Flight("Gdansk", "Moscow");
 
-        Map<String, Flight> airLines = new HashMap<>();
-        airLines.put("1", firstConnection);
-        airLines.put("2", secondConnection);
-        airLines.put("3", thirdConnection);
+        List<Flight> flightDB = new ArrayList<>();
+        flightDB.add(firstConnection);
+        flightDB.add(secondConnection);
+        flightDB.add(thirdConnection);
 
-        return airLines;
+        return flightDB;
     }
 
 

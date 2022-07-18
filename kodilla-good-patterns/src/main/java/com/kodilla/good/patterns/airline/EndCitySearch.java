@@ -7,12 +7,14 @@ import java.util.stream.Collectors;
 public class EndCitySearch implements AirlineSearchEngine {
 
     public List<Flight> search(CityRequest city) {
-        Map<String, Flight> airLinesMap;
-        airLinesMap = FlightDB.getAirLines();
+        List<Flight> flightDB;
+        flightDB = FlightDB.getAirLines();
 
-        return airLinesMap.values().stream()
-                .filter(m -> m.getArrivalCity().equals(city))
+        return flightDB.stream()
+                .filter(m -> m.getArrivalCity().equals(city.getCity()))
+                .map(m -> new Flight(m.getDepartureCity(), m.getArrivalCity()))
                 .collect(Collectors.toList());
 
     }
+
 }
