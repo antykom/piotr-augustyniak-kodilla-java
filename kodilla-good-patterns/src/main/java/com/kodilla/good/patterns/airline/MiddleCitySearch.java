@@ -14,9 +14,9 @@ public class MiddleCitySearch implements AirlineSearchEngine {
 
 
         for (Flight flightTo : toMiddleCity) {
-            for(Flight flightFrom : fromMiddleCity){
-                if(flightTo.getArrivalCity().equals(flightFrom.getDepartureCity())){
-                    flightList.add(new Flight(flightTo.getDepartureCity(),flightFrom.getArrivalCity()));
+            for (Flight flightFrom : fromMiddleCity) {
+                if (flightTo.getArrivalCity().equals(flightFrom.getDepartureCity())) {
+                    flightList.add(new Flight(flightTo.getDepartureCity(), flightFrom.getArrivalCity()));
                 }
             }
 
