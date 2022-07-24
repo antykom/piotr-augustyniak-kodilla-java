@@ -12,6 +12,19 @@ public class MiddleCitySearch implements AirlineSearchEngine {
         List<Flight> fromMiddleCity = new StartCitySearch().search(city);
         List<Flight> flightList = new ArrayList<>();
 
+        /**
+         *                                  SEARCH ENGINE USING STREAM
+         flightList = toMiddleCity.stream()
+                        .forEach(tm -> {
+                                    fromMiddleCity.stream()
+                                        .filter(fm -> fm.getDepartureCity().equals(city.getCity()) && fm.getDepartureCity().equals(tm.getArrivalCity()))
+                                        .collect(Collectors.toList());
+                         });
+
+         **/
+
+
+
 
         for (Flight flightTo : toMiddleCity) {
             for (Flight flightFrom : fromMiddleCity) {
