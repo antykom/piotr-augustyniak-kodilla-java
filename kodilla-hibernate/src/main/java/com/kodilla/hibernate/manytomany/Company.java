@@ -4,7 +4,13 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+@NamedNativeQuery(
+        name = "Company.retrieveNameWithParam",
+        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT(:SUB,'%')",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
