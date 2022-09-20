@@ -27,6 +27,7 @@ public class SudokuTestSuite {
 
     }
 
+    /**
     @Test
     void algorithmTest() {
         //Given
@@ -114,4 +115,5 @@ public class SudokuTestSuite {
         game.resolveSudoku();
 
     }
+    **/
 }
